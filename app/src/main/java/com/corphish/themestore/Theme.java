@@ -1,5 +1,7 @@
 package com.corphish.themestore;
 
+import java.io.Serializable;
+
 /**
  * Created by Avinaba on 10/12/2016.
  */
@@ -7,7 +9,7 @@ package com.corphish.themestore;
 /*
 * Theme API
 * */
-public class Theme {
+public class Theme implements Serializable {
 
     // Name - Name of theme
     String name;
