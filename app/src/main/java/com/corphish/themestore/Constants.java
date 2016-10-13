@@ -14,4 +14,10 @@ public class Constants {
     public static float CARDVIEW_ELEVATION      = 4;
 
     public static int IMAGEVIEW_DIMENSION       = 64;
+
+    public static int TEXTVIEW_PADDING          = 16;
+
+    // Status Codes
+    public static int STATUS_OK                 = 10;
+    public static int STATUS_FATAL              = 11;
 }
