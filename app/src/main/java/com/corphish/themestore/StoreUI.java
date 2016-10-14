@@ -1,6 +1,7 @@
 package com.corphish.themestore;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.util.Log;
 import android.view.View;
@@ -107,8 +108,20 @@ public class StoreUI {
         horizontalLayout.addView(textView);
 
         cardView.addView(horizontalLayout);
+        createCardViewListener(cardView,theme);
 
         addToParent(cardView);
+    }
+
+    public void createCardViewListener(CardView cardView, final Theme theme) {
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context,ThemeViewerActivity.class);
+                intent.putExtra("Theme",theme);
+                context.startActivity(intent);
+            }
+        });
     }
 
     public void createPage(ArrayList<Theme> themes) {
