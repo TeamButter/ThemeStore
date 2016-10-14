@@ -1,0 +1,17 @@
+{
+	"theme": [{
+		"name": "Test Theme 1",
+		"desc": "First test theme",
+		"download_url": "https://basketbuild.com/uploads/devs/corphish/app.apk",
+		"package": "com.corphish.test1",
+		"banner_url": "http://orig11.deviantart.net/20eb/f/2015/030/6/f/_minflat__dark_material_design_wallpaper__4k__by_dakoder-d8fjqzu.jpg",
+		"thumbnail_url": "https://lh3.ggpht.com/J2tezxKcyO-3VSfKmBUEd1qN87ONI9tXoGNp-eerK0ENt5e2efYylqEQnlDLJYs_ndW2=w300"
+	}, {
+		"name": "Test Theme 2",
+		"desc": "Second test theme",
+		"download_url": "https://basketbuild.com/uploads/devs/corphish/boot.img",
+		"package": "com.corphish.test2",
+		"banner_url": "https://newevolutiondesigns.com/images/freebies/google-material-design-wallpaper-9.jpg",
+		"thumbnail_url": "https://lh3.googleusercontent.com/_Ofe1l5kLKOZPctG4esWo4XYlbhnIQ5Lt34oRxSbsuQR_9Nr98oMdNM590iy9DSNHRsP=w300"
+	}]
+}
