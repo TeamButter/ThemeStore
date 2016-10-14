@@ -1,6 +1,5 @@
 package com.corphish.themestore;
 
-import android.accounts.NetworkErrorException;
 import android.os.AsyncTask;
 import android.util.Log;
 
