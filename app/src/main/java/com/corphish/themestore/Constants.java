@@ -10,10 +10,10 @@ public class Constants {
     public static String LOG_TAG = "ThemeStore";
 
     // UI
-    public static int CARDVIEW_MARGIN           = 16;
-    public static float CARDVIEW_ELEVATION      = 4;
+    public static int CARDVIEW_MARGIN           = 8;
+    public static float CARDVIEW_ELEVATION      = 8;
 
-    public static int IMAGEVIEW_DIMENSION       = 64;
+    public static int IMAGEVIEW_DIMENSION       = 112;
 
     public static int TEXTVIEW_PADDING          = 16;
 
