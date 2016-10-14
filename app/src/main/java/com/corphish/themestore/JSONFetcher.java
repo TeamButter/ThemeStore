@@ -1,5 +1,6 @@
 package com.corphish.themestore;
 
+import android.accounts.NetworkErrorException;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -99,7 +100,11 @@ public class JSONFetcher extends AsyncTask<String, String, String> {
            jsonObject = new JSONObject(JSONStr);
            isJSONFetched = true;
            jsonResponse.onResponse(jsonObject);
-       } catch (JSONException e) {}
+       } catch (JSONException e) {
+           Log.e(TAG,"Failed to process JSON!");
+       } catch (NullPointerException e) {
+           Log.e(TAG,"Could not fetch JSON data");
+       }
 
     }
 
