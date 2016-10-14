@@ -29,7 +29,7 @@ public class Theme implements Serializable {
     // BannerURL - Direct image link of Theme banner
     String bannerUrl;
 
-    // ImageURLs - Array of direct image links for theme screenshots
+    // ImageURLs - Array of direct image links for theme screenshots. Note:- This is not implemented in UI level.
     String[] imageURls;
 
 
