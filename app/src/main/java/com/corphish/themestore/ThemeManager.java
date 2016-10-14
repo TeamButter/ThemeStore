@@ -29,6 +29,7 @@ public class ThemeManager {
                 theme.setDownloadUrl(object.getString("download_url"));
                 theme.setPackageName(object.getString("package"));
                 theme.setBannerUrl(object.getString("banner_url"));
+                theme.setThumbnailUrl(object.getString("thumbnail_url"));
 
                 mThemeArrayList.add(theme);
             }
