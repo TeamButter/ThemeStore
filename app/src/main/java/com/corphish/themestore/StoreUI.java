@@ -86,10 +86,13 @@ public class StoreUI {
 
         textView.setPadding(Constants.TEXTVIEW_PADDING,Constants.TEXTVIEW_PADDING,Constants.TEXTVIEW_PADDING,Constants.TEXTVIEW_PADDING);
 
+        textView.setText(string);
+
         return textView;
     }
 
     public void createThemeCard(Theme theme) {
+        Log.d(Constants.LOG_TAG,"Theme Name - " + theme.getName());
         CardView cardView = createCardView();
 
         LinearLayout horizontalLayout = createLayout(LinearLayout.HORIZONTAL);
@@ -133,7 +136,7 @@ public class StoreUI {
         }
 
         // Check whether themeArrayList is empty or not
-        if(!themeArrayList.isEmpty()) {
+        if(themeArrayList.isEmpty()) {
             Log.w(Constants.LOG_TAG,"ThemeList defined but empty.");
             warn_count++;
         }
