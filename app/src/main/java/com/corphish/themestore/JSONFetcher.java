@@ -25,7 +25,7 @@ public class JSONFetcher extends AsyncTask<String, String, String> {
     String JSONStr = null;
 
     String TAG = Constants.LOG_TAG;
-    String url = "www.url.com";
+    String url = "https://raw.githubusercontent.com/corphish/recovery_installer_xl_cache/master/test.json";
 
     boolean isJSONFetched = false;
 
@@ -34,6 +34,10 @@ public class JSONFetcher extends AsyncTask<String, String, String> {
     }
 
     JSONResponse jsonResponse = null;
+
+    public JSONFetcher(JSONResponse response) {
+        this.jsonResponse = response;
+    }
 
     public String makeServiceCall(String reqUrl) {
         String response = null;
