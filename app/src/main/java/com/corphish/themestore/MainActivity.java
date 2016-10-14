@@ -1,6 +1,5 @@
 package com.corphish.themestore;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,7 +11,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
 
-import com.corphish.themestore.ThemeViewerActivity;
 
 import org.json.JSONObject;
 
@@ -45,13 +43,6 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        /*Intent intent = new Intent(this,ThemeViewerActivity.class);
-        Theme theme = new Theme();
-        theme.setName("Test Theme");
-        theme.setDescription("My awesome theme. Presenting my brand new super awesome blaba theme with this and that feature");
-        intent.putExtra("Theme",theme);
-        startActivity(intent);*/
 
          linearLayout = (LinearLayout)findViewById(R.id.mlinearlayout_main);
 
