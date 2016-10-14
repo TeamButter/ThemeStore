@@ -63,6 +63,8 @@ public class StoreUI {
     public ImageView createImage() {
         ImageView imageView = new ImageView(context);
 
+        imageView.setAdjustViewBounds(true);
+
         imageView.setMaxWidth(Constants.IMAGEVIEW_DIMENSION);
         imageView.setMaxHeight(Constants.IMAGEVIEW_DIMENSION);
 
@@ -92,7 +94,6 @@ public class StoreUI {
     }
 
     public void createThemeCard(Theme theme) {
-        Log.d(Constants.LOG_TAG,"Theme Name - " + theme.getName());
         CardView cardView = createCardView();
 
         LinearLayout horizontalLayout = createLayout(LinearLayout.HORIZONTAL);
