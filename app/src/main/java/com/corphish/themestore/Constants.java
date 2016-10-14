@@ -20,4 +20,7 @@ public class Constants {
     // Status Codes
     public static int STATUS_OK                 = 10;
     public static int STATUS_FATAL              = 11;
+
+    // JSON url
+    public static String JSON_Url               = "https://raw.githubusercontent.com/TeamButter/ThemeStore/master/data/test.json";
 }

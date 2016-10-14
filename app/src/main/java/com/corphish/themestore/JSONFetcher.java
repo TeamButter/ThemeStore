@@ -26,7 +26,7 @@ public class JSONFetcher extends AsyncTask<String, String, String> {
     String JSONStr = null;
 
     String TAG = Constants.LOG_TAG;
-    String url = "https://raw.githubusercontent.com/corphish/recovery_installer_xl_cache/master/test.json";
+    String url = Constants.JSON_Url;
 
     boolean isJSONFetched = false;
 
