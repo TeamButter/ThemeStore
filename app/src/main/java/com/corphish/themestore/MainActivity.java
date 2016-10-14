@@ -10,11 +10,25 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
 
 import com.corphish.themestore.ThemeViewerActivity;
 
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    // Master declarations
+    JSONObject mJsonObject;
+    ArrayList<Theme> themeArrayList;
+
+    ThemeManager themeManager;
+    StoreUI storeUI;
+
+    LinearLayout linearLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +46,33 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        Intent intent = new Intent(this,ThemeViewerActivity.class);
+        /*Intent intent = new Intent(this,ThemeViewerActivity.class);
         Theme theme = new Theme();
         theme.setName("Test Theme");
         theme.setDescription("My awesome theme. Presenting my brand new super awesome blaba theme with this and that feature");
         intent.putExtra("Theme",theme);
-        startActivity(intent);
+        startActivity(intent);*/
+
+         linearLayout = (LinearLayout)findViewById(R.id.mlinearlayout_main);
+
+        JSONFetcher jsonFetcher = new JSONFetcher(new JSONFetcher.JSONResponse() {
+            @Override
+            public void onResponse(JSONObject jsonObject) {
+                mJsonObject = jsonObject;
+
+                themeManager = new ThemeManager(mJsonObject);
+                themeManager.init();
+
+                themeArrayList = themeManager.getThemeArrayList();
+
+                storeUI = new StoreUI(MainActivity.this);
+
+                storeUI.setLayout(linearLayout);
+                storeUI.setThemeArrayList(themeArrayList);
+                storeUI.init();
+            }
+        });
+        jsonFetcher.execute();
 
     }
 
